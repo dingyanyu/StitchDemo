@@ -11,8 +11,6 @@ bool try_use_gpu = false;
 vector<Mat> imgs;
 string result_name = "result.jpg";
 
-void printUsage();
-int parseCmdArgs(int argc, char** argv);
 
 int main(int argc, char* argv[])
 {
