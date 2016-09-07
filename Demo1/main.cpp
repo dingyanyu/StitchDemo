@@ -11,20 +11,18 @@ bool try_use_gpu = false;
 vector<Mat> imgs;
 string result_name = "result.jpg";
 
-void printUsage();
-int parseCmdArgs(int argc, char** argv);
 
 int main(int argc, char* argv[])
 {
 //	int retval = parseCmdArgs(argc, argv);
 //	if (retval) return -1;
 
-	Mat img1 = imread("boat1.jpg");
-	Mat img2 = imread("boat2.jpg");
-	Mat img3 = imread("boat3.jpg");
-	Mat img4 = imread("boat4.jpg");
-	Mat img5 = imread("boat5.jpg");
-	Mat img6 = imread("boat6.jpg");
+	Mat img1 = imread("boat1vga.jpg");
+	Mat img2 = imread("boat2vga.jpg");
+	Mat img3 = imread("boat3vga.jpg");
+	Mat img4 = imread("boat4vga.jpg");
+	Mat img5 = imread("boat5vga.jpg");
+	Mat img6 = imread("boat6vga.jpg");
 
 	imgs.push_back(img1);
 	imgs.push_back(img2);
