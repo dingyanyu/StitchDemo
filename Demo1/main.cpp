@@ -33,6 +33,8 @@ int main(int argc, char* argv[])
 	imgs.push_back(img5);
 	imgs.push_back(img6);
 
+	//记录起始时间
+	double time0 = static_cast<double>(getTickCount());
 	Mat pano;
 	Stitcher stitcher = Stitcher::createDefault(try_use_gpu);
 	Stitcher::Status status = stitcher.stitch(imgs, pano);
@@ -43,7 +45,12 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 	
+	//计算运行时间并输出
+	time0 = ((double)getTickCount() - time0) / getTickFrequency();
+	cout << "此方法运行时间为:" << time0 << "秒" << endl;		//输出运行时间
 	namedWindow(result_name);
+
+	//显示效果图
 	imshow(result_name, pano);
 	imwrite(result_name, pano);
 	waitKey();
