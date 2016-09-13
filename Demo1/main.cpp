@@ -14,8 +14,6 @@ string result_name = "result.jpg";
 
 int main(int argc, char* argv[])
 {
-//	int retval = parseCmdArgs(argc, argv);
-//	if (retval) return -1;
 
 	Mat img1 = imread("boat1vga.jpg");
 	Mat img2 = imread("boat2vga.jpg");
